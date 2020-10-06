@@ -20,4 +20,8 @@ jobs:
             - name: Running tests
               run: |
                   pytest -v -s
-            
+            - name: Code formatter
+              if: github.event_name == 'push'
+              run: |
+                  black .
+    
