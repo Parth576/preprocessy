@@ -20,4 +20,6 @@ jobs:
             - name: Running tests
               run: |
                   pytest -v -s
-            
+            - name: Run Linter
+              run: |
+                  pylint *.py
