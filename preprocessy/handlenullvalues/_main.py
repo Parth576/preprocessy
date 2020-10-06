@@ -38,7 +38,7 @@ class NullValuesHandler:
 
     def __validate_input(self):
         if self.df is None:
-            raise TypeError("Feature dataframe should not be of None type")
+            raise ValueError("Feature dataframe should not be of None type")
 
         if type(self.df) is not pd.core.frame.DataFrame:
             raise TypeError(
