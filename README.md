@@ -63,6 +63,22 @@ The output consists of processed dataset and pipeline parameters depending on th
 
 - **evaluations** - Contains jupyter notebooks with example implementations and performance measurements
 
+## Development Environment Setup (with Docker)
+
+```bash
+git clone <your fork of preprocessy>
+
+cd preprocessy
+
+sudo docker run -it --rm -p 8000:8000 -v $(pwd):/usr/src/app --name preprocessy-jupyter parth576/test:v1.0
+```
+Once the container is running, you'll get a bash shell to run pytest, black, codespell, there are two additional commands for running a jupyter notebook in the background:
+
+```bash
+dpp # Runs the jupyter notebook server in the background using nohup
+dpp-url # Gives the URL for the jupyter notebook server with the token
+```
+
 ## Requirements
 
 ```
